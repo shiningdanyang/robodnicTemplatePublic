@@ -20,7 +20,6 @@ int runSpeed     = 50;
 int rotateSpeed  = 20;
 
 void motor1(int speed) {
-#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -36,13 +35,11 @@ void motor1(int speed) {
     digitalWrite(R_PWM1, 0);
     analogWrite(L_PWM1, abs(speed));
   }
-#endif
   //  Serial.print(speed);
   //  Serial.print(" ");
 }
 
 void motor2(int speed) {
-#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -59,12 +56,12 @@ void motor2(int speed) {
     digitalWrite(R_PWM2, 0);
     analogWrite(L_PWM2, abs(speed));
   }
-#endif
   //  Serial.print(speed);
   //  Serial.print(" ");
 }
 
 void motor3(int speed) {
+#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -81,11 +78,13 @@ void motor3(int speed) {
     digitalWrite(R_PWM3, 0);
     analogWrite(L_PWM3, abs(speed));
   }
+#endif
   //  Serial.print(speed);
   //  Serial.print(" ");
 }
 
 void motor4(int speed) {
+#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -104,6 +103,7 @@ void motor4(int speed) {
   }
   //  Serial.print(speed);
   //  Serial.print(" ");
+#endif
 }
 
 void testMotor()
