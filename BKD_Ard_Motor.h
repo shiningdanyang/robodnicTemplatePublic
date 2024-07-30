@@ -1,3 +1,9 @@
+/*
+     Created on: Oct 19, 2022
+     Author: ShiningDanyang
+     Please respect the author and do not take it as your own
+*/
+
 #ifndef INC_BKD_ARD_MOTOR_H_
 #define INC_BKD_ARD_MOTOR_H_
 
@@ -10,14 +16,8 @@
 #define R_PWM4  6
 #define L_PWM4  5
 
-int speedMode    = 3;
-int realRunSpeed = 0;
-int runSpeed     = 0;
-int runSpeed1    = 200;/////////////////////////////////////////////
-int runSpeed2    = 150;////////////////////////////////////////////
-int runSpeed3    = 100;////////////////////////////////////////////
-int rotateSpeed  = 0;
-int counterAcc   = 0;
+int runSpeed     = 50;
+int rotateSpeed  = 20;
 
 void motor1(int speed) {
 #ifdef MECANUM
