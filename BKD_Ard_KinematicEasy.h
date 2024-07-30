@@ -1,3 +1,9 @@
+/*
+     Created on: Oct 19, 2022
+     Author: ShiningDanyang
+     Please respect the author and do not take it as your own
+*/
+
 #ifndef INC_BKD_ARD_KINEMATICEASY_H_
 #define INC_BKD_ARD_KINEMATICEASY_H_
 
