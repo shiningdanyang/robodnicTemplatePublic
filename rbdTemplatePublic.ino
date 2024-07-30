@@ -25,7 +25,7 @@
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Welcome to BKD-Phoenix ecosystem");
+  Serial.println("Welcome to BKD-Fire ecosystem");
 #ifdef TEST
   testMotor();
 #endif
