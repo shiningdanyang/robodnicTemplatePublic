@@ -1,7 +1,7 @@
 /*
      Created on: Oct 19, 2022
      Author: ShiningDanyang
-     Please respect the autor and do not take it as your own
+     Please respect the author and do not take it as your own
 */
 #define BKD_GAMEPAD
 #define MECANUM
