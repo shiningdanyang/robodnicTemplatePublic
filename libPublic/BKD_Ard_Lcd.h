@@ -37,17 +37,7 @@ void setupLcd()
 void onLoopLcd()
 {
   lcd.setCursor(7, 1);
-  lcd.print(compassData);
-  lcd.setCursor(5, 2);
-  lcd.print(runSpeed);
-  lcd.setCursor(17, 2);
-  lcd.print(shootSpeed);
-  lcd.setCursor(4, 3);
-  lcd.print("          ");
-  lcd.setCursor(4, 3);
-  lcd.print(enc_motor);
-  lcd.setCursor(19, 1);
-  lcd.print(isLiveCompass);
+  lcd.print("Respect and gratitude, tks u ;)");
 }
 
 #endif /* INC_BKD_ARD_GAMEPAD_H_ */
