@@ -15,8 +15,6 @@
 #define L_PWM3  8
 #define R_PWM4  6
 #define L_PWM4  5
-#define pwmMotorShoot   4
-#define dirMotorShoot   27  
 
 int speedMode    = 1;
 int runSpeed1    = 70;/////////////////////////////////////////////
@@ -25,10 +23,5 @@ int runSpeed2    = 115;////////////////////////////////////////////
 int rotSpeed2    = 50;
 int runSpeed3    = 160;////////////////////////////////////////////
 int rotSpeed3    = 60;
-
-int shootSpeed      = 115;
-bool isShoot        = false;
-bool isChainDriver  = false;
-bool isChainDriver1  = false;
 
 #endif /* INC_BKD_MOTOR_PREDEF_H_ */
