@@ -38,7 +38,7 @@
 #define MECANUM
 #define IMU
 #define KINEMATIC_EASY
-#define ULTIMATE
+//#define ULTIMATE
 // #define DEBUG
 // #define TEST
 
