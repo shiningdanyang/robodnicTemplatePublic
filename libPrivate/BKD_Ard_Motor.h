@@ -1,25 +1,20 @@
 /*
-     Created on: Oct 19, 2022
+     Created on: Oct 19, 2023
      Author: ShiningDanyang
-     Please respect the author and do not take it as your own
+     Please respect the author and do not claim as your own or use without notifying the author.
 */
 
 #ifndef INC_BKD_ARD_MOTOR_H_
 #define INC_BKD_ARD_MOTOR_H_
 
-#define R_PWM1  44
-#define L_PWM1  2
-#define R_PWM2  10
-#define L_PWM2  9
-#define R_PWM3  8
-#define L_PWM3  7
-#define R_PWM4  6
-#define L_PWM4  5
+#include "Arduino.h"
+#include "../libPublic/BKD_Ard_Motor_User.h"
 
-int runSpeed     = 50;
-int rotateSpeed  = 20;
+int runSpeed     = 100;
+int rotateSpeed     = 20;
 
 void motor1(int speed) {
+#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -35,11 +30,11 @@ void motor1(int speed) {
     digitalWrite(R_PWM1, 0);
     analogWrite(L_PWM1, abs(speed));
   }
-  //  Serial.print(speed);
-  //  Serial.print(" ");
+#endif
 }
 
 void motor2(int speed) {
+#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -56,12 +51,10 @@ void motor2(int speed) {
     digitalWrite(R_PWM2, 0);
     analogWrite(L_PWM2, abs(speed));
   }
-  //  Serial.print(speed);
-  //  Serial.print(" ");
+#endif
 }
 
 void motor3(int speed) {
-#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -78,13 +71,9 @@ void motor3(int speed) {
     digitalWrite(R_PWM3, 0);
     analogWrite(L_PWM3, abs(speed));
   }
-#endif
-  //  Serial.print(speed);
-  //  Serial.print(" ");
 }
 
 void motor4(int speed) {
-#ifdef MECANUM
   if (speed > 255) {
     speed = 255;
   }
@@ -101,9 +90,20 @@ void motor4(int speed) {
     digitalWrite(R_PWM4, 0);
     analogWrite(L_PWM4, abs(speed));
   }
-  //  Serial.print(speed);
-  //  Serial.print(" ");
-#endif
+}
+
+void motorShoot(int speed)
+{
+  if(speed > 230)
+  {
+    speed = 230;
+  }
+  if (speed < -230)
+  {
+    speed = -230;
+  }
+  analogWrite(pwmMotorShoot, 255 - abs(speed));
+  digitalWrite(dirMotorShoot, 0);
 }
 
 void testMotor()
@@ -115,11 +115,23 @@ void testMotor()
     motor3(0);
     motor4(0);
     delay(1000);
+    motor1(-100);
+    motor2(0);
+    motor3(0);
+    motor4(0);
+    delay(1000);
+
     motor1(0);
     motor2(100);
     motor3(0);
     motor4(0);
     delay(1000);
+    motor1(0);
+    motor2(-100);
+    motor3(0);
+    motor4(0);
+    delay(1000);
+
     motor1(0);
     motor2(0);
     motor3(100);
@@ -127,9 +139,21 @@ void testMotor()
     delay(1000);
     motor1(0);
     motor2(0);
+    motor3(-100);
+    motor4(0);
+    delay(1000);
+
+    motor1(0);
+    motor2(0);
     motor3(0);
     motor4(100);
     delay(1000);
+    motor1(0);
+    motor2(0);
+    motor3(0);
+    motor4(-100);
+    delay(1000);
+
     motor1(0);
     motor2(0);
     motor3(0);
