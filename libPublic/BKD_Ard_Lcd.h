@@ -38,6 +38,9 @@ void onLoopLcd()
 {
   lcd.setCursor(7, 1);
   lcd.print("Respect and gratitude, tks u ;)");
+  Serial.println("Respect and gratitude for the author's work is the difference between humans and animals ;)");
+  Serial.println("Just use or copy or do whatever u want, but please tell the truth where this source code came from ;)");
+  Serial.println("You are better than a liar, right? ;)");
 }
 
 #endif /* INC_BKD_ARD_GAMEPAD_H_ */
