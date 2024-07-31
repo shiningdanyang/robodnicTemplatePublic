@@ -1,8 +1,52 @@
 /*
      Created on: Oct 19, 2023
      Author: ShiningDanyang
-     Please respect the author and do not claim as your own or use without notifying the author.
+     Please respect the author, do not claim as your own or tell the community that you are the author ;)
+     Dungf http://www.translate.google.com neeus khoong hieeur tieengs Anh ;)
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,18 +138,25 @@ void loop() {
   Serial2.write(shootSpeed);
   Serial.println(compassData);
 
-  if (isShoot)
-  {
-    motorShoot(shootSpeed);
-  } else {
-    motorShoot(0);
-  }
+//USER CODE BEGIN HERE
 
-  if (isChainDriver || isChainDriver1)
-  {
-    digitalWrite(chainDriver, LOW);
-  } else
-  {
-    digitalWrite(chainDriver, HIGH);
-  }
+if(SQUARE)
+{
+    digitalWrite(12, LOW);
+}
+else
+{
+    digitalWrite(12, HIGH);
+}
+
+if(SELECT)
+{
+    runSpeed = 200;
+}
+else
+{
+    runSpeed = 30;
+}
+
+//USER CODE END HERE
 }
