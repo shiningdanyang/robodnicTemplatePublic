@@ -30,19 +30,8 @@ void setupLcd()
   lcd.begin(20, 4);
   lcd.display();
   lcd.setCursor(0, 0);
-  lcd.print(" Danyang's Ecosystem");
-  lcd.setCursor(0, 1);
-  lcd.print("Angle: ");
-  lcd.setCursor(12, 1);
-  lcd.print("live ");
-  lcd.setCursor(6, 1);
-  lcd.print("     ");
-  lcd.setCursor(0, 2);
-  lcd.print("Run:");
-  lcd.setCursor(10, 2);
-  lcd.print("Shoot:");
-  lcd.setCursor(0, 3);
-  lcd.print("Enc:");
+  lcd.print(" Respect Author please, dude ;)");
+  
 }
 
 void onLoopLcd()
